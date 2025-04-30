@@ -1,0 +1,36 @@
+Step 1: Initialize the Vite + React Project
+In the terminal:
+
+npm create vite@latest face-matching-app -- --template react
+cd face-matching-app
+npm install
+
+Step2: tailwindcss and its peerDeps were installed:
+created tailwind.config.js and postcss.config.js files
+created src/styles.css 
+added   "build:css": "postcss src/styles.css -o public/styles.css"   into package.json
+created index.html in public/
+
+Step3:
+ npm install -D tailwindcss-cli
+ npx tailwindcss-cli init -p
+
+
+npm run dev
+
+---gave error
+so Rename postcss.config.js to postcss.config.cjs
+
+--again error
+npm install -D @tailwindcss/postcss
+and changed postcss.config.cjs into
+module.exports = {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+}
+
+now everything is Setup
+next i did src/pages/ where .jsx files are added for different pages required
+then these pages are "link" and "route" in app.jsx
