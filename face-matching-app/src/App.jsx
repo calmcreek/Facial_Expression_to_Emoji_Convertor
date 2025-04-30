@@ -1,7 +1,8 @@
-// src/App.jsx
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+import EmojiDetector from './pages/EmojiDetector';
+
 import './App.css';
 
 function App() {
@@ -10,18 +11,23 @@ function App() {
       <div>
         <nav>
           <ul>
-            <li>
+            <div>
               <Link to="/">Home</Link>
-            </li>
-            <li>
+            </div>
+            <div>
               <Link to="/about">About</Link>
-            </li>
+            </div>
+            <div>
+                <Link to="/emoji">Emoji Detection</Link>
+            </div>
           </ul>
         </nav>
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/emoji" element={<EmojiDetector />} />
+
         </Routes>
       </div>
     </Router>
