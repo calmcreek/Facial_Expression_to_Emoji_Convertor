@@ -1,12 +1,12 @@
-##Face Matching App Setup Guide
-#Step 1: Initialize the Vite + React Project
+## Face Matching App Setup Guide
+# Step 1: Initialize the Vite + React Project
 In the terminal:
 
 npm create vite@latest face-matching-app -- --template react
 cd face-matching-app
 npm install
 
-#Step 2: Install TailwindCSS and Configure
+# Step 2: Install TailwindCSS and Configure
 TailwindCSS and its peer dependencies were installed:
 
 tailwind.config.js and postcss.config.js files were created.
@@ -17,7 +17,7 @@ Added "build:css": "postcss src/styles.css -o public/styles.css" into package.js
 
 Created index.html in the public/ folder.
 
-#Step 3: Install TailwindCSS CLI and Configure
+# Step 3: Install TailwindCSS CLI and Configure
 Run the following command to install TailwindCSS CLI:
 
 npm install -D tailwindcss-cli
@@ -42,9 +42,9 @@ module.exports = {
     autoprefixer: {},
   },
 }
-Now, everything is set up correctly.
+# Now, everything is set up correctly.
 
-#Step 4: Setting Up Pages
+# Step 4: Setting Up Pages
 Created src/pages/ where .jsx files are added for different pages required.
 
 These pages are linked and routed in App.jsx.
