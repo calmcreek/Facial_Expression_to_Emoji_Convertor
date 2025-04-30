@@ -1,12 +1,51 @@
-# React + Vite
+##Face Matching App Setup Guide
+#Step 1: Initialize the Vite + React Project
+In the terminal:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+npm create vite@latest face-matching-app -- --template react
+cd face-matching-app
+npm install
 
-Currently, two official plugins are available:
+#Step 2: Install TailwindCSS and Configure
+TailwindCSS and its peer dependencies were installed:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+tailwind.config.js and postcss.config.js files were created.
 
-## Expanding the ESLint configuration
+Created src/styles.css.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Added "build:css": "postcss src/styles.css -o public/styles.css" into package.json.
+
+Created index.html in the public/ folder.
+
+#Step 3: Install TailwindCSS CLI and Configure
+Run the following command to install TailwindCSS CLI:
+
+npm install -D tailwindcss-cli
+Initialize TailwindCSS configuration:
+
+npx tailwindcss-cli init -p
+Run the development server:
+
+npm run dev
+This gave an error. So, rename postcss.config.js to postcss.config.cjs.
+
+Error Fixed:
+
+Install @tailwindcss/postcss:
+
+npm install -D @tailwindcss/postcss
+Modify postcss.config.cjs:
+
+module.exports = {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+}
+Now, everything is set up correctly.
+
+#Step 4: Setting Up Pages
+Created src/pages/ where .jsx files are added for different pages required.
+
+These pages are linked and routed in App.jsx.
+
