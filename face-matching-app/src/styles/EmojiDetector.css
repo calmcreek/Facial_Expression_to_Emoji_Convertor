@@ -1,0 +1,115 @@
+/* Flexbox Layout for Camera and Result */
+.emoji-detector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .emoji-detector-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .webcam-container {
+    width: 60%; /* Adjust the width of the webcam container */
+    height: 200px; /* Fixed height for webcam feed */
+    /*position: left;  For positioning adjustments */
+  }
+  
+  .result-container {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  /* Webcam preview size */
+  .emoji-preview {
+    width: 100%; /* Make webcam take full width of the container */
+    height: auto;
+    border-radius: 8px; /* Rounded edges */
+    object-fit: cover; /* Ensures image or video covers the container without distortion */
+  }
+
+
+  /* Emoji Display - Bubbling Emoji (no background circle) */
+  .emoji-display {
+    font-size: 4rem; /* Base size */
+    animation: bubbleEmoji 1s ease-out forwards; /* Use new keyframes */
+  }
+  
+  /* Bubbling Animation */
+  @keyframes bubbleEmoji {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(3.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Button Styles */
+  .button-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .button-capture,
+  .button-detect,
+  .button-retake,
+  .button-download {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-capture {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .button-detect {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .button-retake {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .button-download {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .status-message {
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+  .emoji-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  

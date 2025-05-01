@@ -56,6 +56,8 @@ npm install face-api.js
 created two files 
  public/models/tiny_face_detector_model-weights_manifest.json
  public/models/face_expression_model-weights_manifest.json
+ public/models/face_expression_model-shard1
+ public/models/tiny_face_detector_model-shard1
  {from (already trained models) https://github.com/justadudewhohacks/face-api.js-models/tree/master} 
 
 They are loaded in your React component via face-api.js like this:
